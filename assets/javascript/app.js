@@ -16,9 +16,10 @@ var currentTime;
 
 
 
+
 function update() {
   currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
-  console.log(currentTime);
+  // console.log(currentTime);
   $('.cTime').html(currentTime);
 }
 setInterval(update, 1000);
@@ -28,6 +29,7 @@ $('#submitTrain').on('click', function() {
     event.preventDefault();
 
     var trainName = $('#name').val().trim();
+
     var destination = $('#destination').val().trim();
     var firstTrain = $('#firstTrain').val().trim();
     var frequency = $('#frequency').val().trim();
@@ -40,15 +42,20 @@ $('#submitTrain').on('click', function() {
         frequency: frequency
 
     });
-
+$('input').val('');
+// ask about if this is the best way to to empty
 });
 
 database.on("child_added", function(Snapshot){
   var db = Snapshot.val();
 var tr = $('<tr>');
+var tcss = db.trainName.replace(/ /g,'').toLowerCase();
+console.log('TCSS', tcss);
+tr.addClass(tcss);
 tr.append('<th>' + db.trainName + '</th>');
 tr.append('<th>' + db.destination + '</th>');
 tr.append('<th>' + db.frequency + '</th>');
+console.log('DB.FREQUENCY', db.frequency);
 tr.append('<th>' + "" + '</th>');
 tr.append('<th>' + ""  + '</th>');
 
