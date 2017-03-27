@@ -10,6 +10,16 @@
     display: inline;
 }*/
 
+.bg-primary{
+  background-color: 	#428bca;
+  color: black;
+    text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; 
+}
+
 #trainInfo th {
   color: white;
 }
