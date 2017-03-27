@@ -14,15 +14,38 @@
   color: white;
 }
 
-.dtrain{
+.dtrain, .btrain, .ftrain, .mtrain {
   background-color: #f47423;
 
 }
 
-[class="4train"]{
+[class="4train"],[class="5train"],[class="6train"]{
   background-color: #00a851;
 }
 
-[class="2train"]{
+[class="2train"], [class="1train"], [class="3train"]{
   background-color: #ef3a42;
+}
+[class="7train"]{
+  background-color: #9c3e97;
+}
+
+.atrain, .ctrain, .etrain, .sirtrain{
+  background-color: #0058a9;
+}
+
+.gtrain{
+  background-color: #85c446;
+}
+
+.jtrain, .ztrain{
+  background-color: #9e5312;
+}
+
+.rtrain, .ntrain, .qtrain, .wtrain{
+  background-color: #ffd900;
+}
+
+.ltrain{
+  background-color: #a7a9ac;
 }
