@@ -86,9 +86,15 @@ tr.append('<th>' + db.frequency + '</th>');
 console.log('DB.FREQUENCY', db.frequency);
 tr.append('<th>' + moment(nextTrain).format("hh:mm") + '</th>');
 tr.append('<th>' + minutesAway  + '</th>');
+tr.append('<th>' + '<button type="button" class="btn btn-default del"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>' + '</th>');
 
 $("#trainInfo").append(tr);
 
+$('.del').on('click', function(){
+  $(this).closest('tr').empty();
+  console.log('$(THIS).PARENT()', $(this).closest('tr'));
+
+});
 
 
 

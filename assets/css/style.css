@@ -17,7 +17,7 @@
     -1px -1px 0 #fff,
     1px -1px 0 #fff,
     -1px 1px 0 #fff,
-    1px 1px 0 #fff; 
+    1px 1px 0 #fff;
 }
 
 #trainInfo th {
@@ -58,4 +58,8 @@
 
 .ltrain{
   background-color: #a7a9ac;
+}
+
+.del {
+  color: red;
 }
